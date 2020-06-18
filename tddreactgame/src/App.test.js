@@ -6,9 +6,9 @@ it('renders without crashing', () => {
   shallow(<App />)
 })
 
-it('App greets the person', () => {
+it('Says Grahams Website on load', () => {
   const wrapper = shallow(<App />)
-  const tester = <h1>Hello</h1>
+  const tester = <h1>Grahams Website</h1>
   expect(wrapper).toContainReact(tester)
 })
 
