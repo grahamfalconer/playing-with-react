@@ -21,14 +21,14 @@ class IdentityGenerator extends Component {
         <div> Loading </div>
           ) : (
         <div class="iDCard">
-            <h3> New Identity </h3>
-            <h2>{ this.state.person.name.title + " " + this.state.person.name.first + " " + this.state.person.name.last}</h2>
+            <h3> New Identity </h3> <br />
+            <h2>{ this.state.person.name.title + " " + this.state.person.name.first + " " + this.state.person.name.last}</h2> <br />
             { "Age: " + this.state.person.dob.age} <br />
             <img src= {this.state.person.picture.large} alt={this.state.person.name.first} /> < br/> <br />
             { "Born on: " + this.state.person.dob.date } <br />
             { this.state.person.location.street.number + ", " + this.state.person.location.street.name + " - " + this.state.person.location.postcode} <br />
             { this.state.person.location.city + ", " + this.state.person.location.state + ", " + this.state.person.location.country } <br /> <br />
-            <h3> New contact Details </h3>
+            <h3> New contact Details </h3> <br />
             { "Phone Number: " + this.state.person.cell } <br />
             { "Email: " + this.state.person.email } <br />
             { "Instagram: " + this.state.person.login.username } 
