@@ -16,7 +16,7 @@ body {
   color: darkslategray;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   display: inline;
 }
 
@@ -24,8 +24,13 @@ code {
   color: white;
 }
 
+h4 {
+  color: cornflowerblue
+}
+
 .navbaritem:hover {
-  background-color: coral;
+  background-color: whitesmoke;
+  cursor: pointer;
 }
 
 .wheel {
@@ -39,6 +44,8 @@ code {
   
 }
 
+
+
 .productimage.producttext {
     position: absolute;
     z-index: 999;
@@ -51,6 +58,19 @@ code {
     font-family: Arial,sans-serif;
     color: #fff;
     width: 60%;
+}
+
+.toppage {
+  background-color: seashell;
+  color : black;
+  min-height: 3rem;
+}
+
+.voucherEntry{
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
 }
 
 

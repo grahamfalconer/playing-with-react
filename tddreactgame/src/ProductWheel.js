@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
+import App from './App';
 
 class ProductWheel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+    };
+  }
+
+  buttonClick = () => {
+    this.props.toggleShowHooverMax();
+}
   render() {
     return (
       <div className="Productwheel">
@@ -12,7 +22,7 @@ class ProductWheel extends Component {
               <div>
                   <img src= "hoovermaxpro.png" alt= "The Kirby" class="productimage"/>
                   <code class="producttext"> The Hoover Max Pro   </code> <h2> $76.99 </h2>
-                  <button className="btn" > Add to cart </button>
+                  <button className="btn" onClick={this.buttonClick} > Add to cart </button>
               </div>
               <div>
                   <img src= "thekirby.png" alt= "The Kirby" class="productimage"/>
