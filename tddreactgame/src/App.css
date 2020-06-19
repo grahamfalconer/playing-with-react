@@ -1,7 +1,7 @@
 
 body {
   color: white;
-  background-color: coral;
+  background-color: steelblue;
   font-family: 'Amaranth', sans-serif;
   margin: 0;
   padding: 0;
@@ -9,3 +9,70 @@ body {
   height: 100%;
   text-align: center;
 }
+
+
+.iDCard{
+  background-color: cornsilk;
+  color: darkslategray;
+}
+
+h1, h2, h3 {
+  display: inline;
+}
+
+code {
+  color: white;
+}
+
+.navbaritem:hover {
+  background-color: coral;
+}
+
+.wheel {
+  display: inline-block;
+  text-align: center;
+}
+
+.productimage {
+  max-height: 20rem;
+  padding-top: 2rem;
+  
+}
+
+.productimage.producttext {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;        
+    text-align: center;
+    top: 5%; /* Adjust this value to move the positioned div up and down */
+    background: rgba(0, 0, 0, 0.8);
+    font-family: Arial,sans-serif;
+    color: #fff;
+    width: 60%;
+}
+
+
+button {
+  padding: 10px 15px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: steelblue;
+  background-color: blanchedalmond;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px wheat;
+}
+
+button:hover {background-color: coral}
+
+button:active {
+  background-color: blanchedalmond;
+  box-shadow: 0 5px wheat;
+  transform: translateY(4px);
+}
+/* 
+background-image: url("/forsale.png"); */

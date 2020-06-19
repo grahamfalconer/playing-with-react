@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
 import IdentityGenerator from './IdentityGenerator.js'
+import Navbar from './Navbar.js'
+import ProductWheel from './ProductWheel.js'
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showProductWheel: true,
+      showPegasus: false,
+      showIdentityGenerator: false,
+    };
+  }
+  
   render() {
     return (
       <div className="App">
           <div>
-              <h1> Best Quality Vacuum </h1>
-              <IdentityGenerator />
+              <Navbar /> <br />
+              <ProductWheel />
           </div>
       </div>
     );
