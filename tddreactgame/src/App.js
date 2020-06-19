@@ -91,7 +91,8 @@ class App extends Component {
       <div>
         <p> Congratulations on finding me </p>
         <IdentityGenerator/>
-            <p> Here is your new identity <br/>
+            <p> Congratulations on finding me <br/>
+             Here is your new identity <br/>
             The train to Alaska leaves at 2pm tomorrow <br/>
             I recommend you get on it and start learning this <br/>
             new identity, best of luck to you fella.
