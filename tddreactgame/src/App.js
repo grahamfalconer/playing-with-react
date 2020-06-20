@@ -10,7 +10,7 @@ class App extends Component {
       voucherCode : '',
       showProductWheel: true,
       showHooverMax: false,
-      showIdentityGenerator: false,
+      showSecretStore: false,
 
     };
   }
@@ -18,9 +18,9 @@ class App extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     let specialCode = 'El Camino'
-    if (this.state.voucherCode == specialCode){
-      this.showIdentityGenerator()
-    }
+    if (this.state.voucherCode === specialCode){
+      this.showSecretStore()
+      }
     }
 
   handleInputChange = (event) => {
@@ -40,11 +40,11 @@ class App extends Component {
     this.setState({ showProductWheel: true, showHooverMax: false })
   }
 
-  showIdentityGenerator = () => {
+  showSecretStore = () => {
     this.setState({
       showProductWheel: false,
       showHooverMax: false,
-      showIdentityGenerator: true
+      showSecretStore: true
     })
   }
 
@@ -86,17 +86,21 @@ class App extends Component {
       );
     }
 
-    else if(this.state.showIdentityGenerator){
+    else if(this.state.showSecretStore){
       return(
-      <div>
-        <p> Congratulations on finding me </p>
-        <IdentityGenerator/>
-            <p> Congratulations on finding me <br/>
-             Here is your new identity <br/>
-            The train to Alaska leaves at 2pm tomorrow <br/>
-            I recommend you get on it and start learning this <br/>
-            new identity, best of luck to you fella.
-            </p>
+      <div >
+            <div id="endmessage" >
+                <img src="transparented.png"/>
+                <p> Congratulations on finding me, <br/>
+                I'm not an easy man to reach. <br/>
+                  <br/>
+                So then, what can I do for you? <br/>
+
+                <p id="newIdentityOption"> - New Identity  </p>
+                <p id="hooverMaxOption"> - One-way flights </p>
+                <p id="oneWayFlights"> - The Hoover Max Pro </p>
+                </p>
+            </div>
       </div>
       )
     }
