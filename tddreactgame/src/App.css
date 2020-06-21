@@ -1,7 +1,7 @@
 
 body {
   color: white;
-  background-color: steelblue;
+  background-color:slategray;
   font-family: 'Amaranth', sans-serif;
   margin: 0;
   padding: 0;
@@ -10,11 +10,18 @@ body {
   text-align: center;
 }
 
+div{
+  height: 10em;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+}
 
 .iDCard{
   background-color: cornsilk;
   color: darkslategray;
 }
+
 
 .hiddenPrompter {
   background-color: darkslategrey;
@@ -38,12 +45,20 @@ p {
   overflow: hidden;    
   font-family: 'Source Code Pro', monospace;  
   font-size: 14px;
-  color: rgba(255,255,255,.70);
+  color: snow;
+}
+
+.consoleStyle{
+  background-color: darkslategrey;
+  border-style: ridge;
+  animation: animated-text 2s linear 1s 1 normal both,
+             animated-cursor 600000ms linear infinite;
+
 }
 
 /* Animation */
 p {
-  animation: animated-text 4s linear 1s 1 normal both,
+  animation: animated-text 2s linear 1s 1 normal both,
              animated-cursor 600ms linear infinite;
 }
 
@@ -92,11 +107,7 @@ p {
     width: 60%;
 }
 
-.toppage {
-  background-color: seashell;
-  color : black;
-  min-height: 3rem;
-}
+
 
 .card {
   background-color: whitesmoke;
@@ -104,6 +115,7 @@ p {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 40%;
+  border-style: solid;
 }
 
 .card:hover {
@@ -139,6 +151,13 @@ p {
   background-color: chocolate;
   cursor: pointer;
 }
+
+#generatedId {
+  float: right;
+  text-align: right;
+  border-style: ridge;
+}
+
 
 
 button {
