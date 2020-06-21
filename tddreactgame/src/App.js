@@ -79,12 +79,12 @@ class App extends Component {
           <div>
               <Navbar showHome={ this.showHome } /> <br />
               <img src= "hoovermaxpro.png" alt= "Hoover Max" class="productimage"/> <br />
-              <h2 class="producttext"> The Hoover Max Pro   </h2> <s> $76.99 </s> <br />
+              <h2 class="producttext"> The Hoover Max Pro   </h2> <s> $76.99 </s> <h3>$69.55</h3><br />
               <button id="homebutton" className="button" onClick={this.toggleShowHooverMax}> Back Home </button> <br />
               <div class="voucherEntry">
                 <form onSubmit={this.handleSubmit}>
                     <h3>Enter Voucher Code </h3>
-                    <h3> <input type="text" placeholder="e.g. FREEHOOVER2020" name="voucherCode" onChange={this.handleInputChange}/> </h3>
+                    <h3> <input maxlength="10" type="text" placeholder="e.g. This Sucks" name="voucherCode" onChange={this.handleInputChange}/> </h3>
                     <h3> <button> Enter </button> </h3>
                 </form>
               </div>
@@ -97,7 +97,7 @@ class App extends Component {
       return(
       <div >
             <div id="endmessage">
-                <img src="transparented.png"/>
+                <img id="theDisappearer" src="transparented.png"/>
                 <p> Congratulations on finding me, <br/>
                 I'm not an easy man to reach. <br/>
                   <br/>

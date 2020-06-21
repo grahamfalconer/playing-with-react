@@ -133,6 +133,7 @@ p {
   font-size: 18px;
 }
 
+
 #endmessage{
   text-align: left;
 }
@@ -140,6 +141,11 @@ p {
 #newIdentityOption:hover {
   background-color: chocolate;
   cursor: pointer;
+}
+
+#theDisappearer{
+  border-radius: 70%;
+  filter: contrast(180%);
 }
 
 #hooverMaxOption:hover {
