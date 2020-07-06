@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import App from './App';
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -8,17 +10,13 @@ class Navbar extends Component {
 
   logoClick = () => {
     this.props.showHome();
-  }
+}
 
-  aboutUsClick = () => {
-    this.props.showAboutUs();
-  }
-  
   render() {
     return (
       <div className="Navbar">
-          <div className="toppage">
-              <h1 className="navbaritem" onClick={this.logoClick}> Best Quality Vacuum </h1> <h4 onClick={this.aboutUsClick} className="navbaritem"> About us </h4>
+          <div class="toppage">
+              <h1 class="navbaritem" onClick={this.logoClick}> Best Quality Vacuum </h1> <h4 class="navbaritem"> About us </h4>
           </div>
       </div>
     );

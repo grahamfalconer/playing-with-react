@@ -1,4 +1,4 @@
-/* general stuff */
+
 body {
   color: white;
   background-color:slategray;
@@ -48,6 +48,34 @@ p {
   color: snow;
 }
 
+.consoleStyle{
+  background-color: darkslategrey;
+  border-style: ridge;
+  animation: animated-text 2s linear 1s 1 normal both,
+             animated-cursor 600000ms linear infinite;
+
+}
+
+/* Animation */
+p {
+  animation: animated-text 2s linear 1s 1 normal both,
+             animated-cursor 600ms linear infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 456px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
 
 .navbaritem:hover {
   background-color: whitesmoke;
@@ -80,7 +108,7 @@ p {
 }
 
 
-/* Secret Store Stuff */
+
 .card {
   background-color: whitesmoke;
   color: darkslategrey;
@@ -103,13 +131,6 @@ p {
   bottom: 8px;
   right: 16px;
   font-size: 18px;
-}
-
-.consoleStyle{
-  background-color: darkslategrey;
-  border-style: ridge;
-  animation: animated-text 2s linear 1s 1 normal both,
-             animated-cursor 600000ms linear infinite;
 }
 
 
@@ -143,6 +164,8 @@ p {
   border-style: ridge;
 }
 
+
+
 button {
   padding: 10px 15px;
   font-size: 18px;
@@ -163,23 +186,5 @@ button:active {
   box-shadow: 0 5px wheat;
   transform: translateY(4px);
 }
-
-/* Animation */
-p {
-  animation: animated-text 2s linear 1s 1 normal both,
-             animated-cursor 600ms linear infinite;
-}
-
-/* text animation */
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 456px;}
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
+/* 
+background-image: url("/forsale.png"); */
