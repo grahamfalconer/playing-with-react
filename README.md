@@ -1,1 +1,2 @@
-This project took some strange turns into what it has become and is now deployed at bestqualityvacuums.surge.sh.
+# playing-with-react
+A side project to practise react and api calls.
