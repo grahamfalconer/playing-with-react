@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import IdentityGenerator from './IdentityGenerator.js'
-import FlightGenerator from './FlightGenerator.js'
 import Navbar from './Navbar.js'
 import ProductWheel from './ProductWheel.js'
 
@@ -10,14 +9,11 @@ class App extends Component {
     this.state = {
       voucherCode : '',
       showProductWheel: true,
-      showAboutUs: false,
       showHooverMax: false,
       showSecretStore: false,
       showNewIdentity: false,
-      showFlightGenerator: false
     };
   }
-
 
   // Best Quality Vacuums Storefront
   toggleShowHooverMax = () => {
@@ -27,11 +23,6 @@ class App extends Component {
     this.setState({ showProductWheel: true, showHooverMax: false })
   }
 
-  showAboutUs = () => {
-    this.setState({ showProductWheel: true, showHooverMax: false })
-  }
-
-
   // "The Disappearers secret store"
   showSecretStore = () => {
     this.setState({
@@ -40,23 +31,12 @@ class App extends Component {
       showSecretStore: true
     })
   }
-
   toggleShowNewId = () => {
     this.setState({ 
     showSecretStore: false,
-    showHooverMax: false,
-    showProductWheel: false,
     showNewIdentity: true,
-    })
-  }
-
-  toggleShowFlightGenerator = () => {
-    this.setState({
-      showSecretStore: false,
-      showNewIdentity: false,
-      showFlightGenerator: true,
-      showHooverMax: false,
-      showProductWheel: false
+    showHooverMax: false,
+    showProductWheel: false
     })
   }
 
@@ -76,14 +56,13 @@ class App extends Component {
     })
   }
 
-  
   render() {
     const { voucherCode } = this.state.voucherCode
     if(this.state.showProductWheel){
       return (
         <div className="App">
             <div>
-                <Navbar showHome={ this.showHome, this.showAboutUs}/> <br />
+                <Navbar showHome={ this.showHome }/> <br />
                 <ProductWheel toggleShowHooverMax={ this.toggleShowHooverMax }/>
             </div>
         </div>
@@ -91,23 +70,23 @@ class App extends Component {
     }
 
     else if(this.state.showHooverMax){
-      return(
-        <div className="App">
-            <div>
-                <Navbar showHome={ this.showHome, this.showAboutUs } /> <br />
-                <img src= "hoovermaxpro.png" alt= "Hoover Max" className="productimage"/> <br />
-                <FlightGenerator />
-                <h2 className="producttext"> The Hoover Max Pro   </h2> <s> $76.99 </s> <h3>$69.55</h3><br />
-                <button id="homebutton" className="button" onClick={this.toggleShowHooverMax}> Back Home </button> <br />
-                <div className="voucherEntry">
-                  <form onSubmit={this.handleSubmit}>
-                      <h3>Enter Voucher Code </h3>
-                      <h3> <input maxlength="10" type="text" placeholder="e.g. This Sucks" name="voucherCode" onChange={this.handleInputChange}/> </h3>
-                      <h3> <button> Enter </button> </h3>
-                  </form>
-                </div>
-            </div>
-        </div>
+
+  return(
+      <div className="App">
+          <div>
+              <Navbar showHome={ this.showHome } /> <br />
+              <img src= "hoovermaxpro.png" alt= "Hoover Max" class="productimage"/> <br />
+              <h2 class="producttext"> The Hoover Max Pro   </h2> <s> $76.99 </s> <h3>$69.55</h3><br />
+              <button id="homebutton" className="button" onClick={this.toggleShowHooverMax}> Back Home </button> <br />
+              <div class="voucherEntry">
+                <form onSubmit={this.handleSubmit}>
+                    <h3>Enter Voucher Code </h3>
+                    <h3> <input maxlength="10" type="text" placeholder="e.g. This Sucks" name="voucherCode" onChange={this.handleInputChange}/> </h3>
+                    <h3> <button> Enter </button> </h3>
+                </form>
+              </div>
+          </div>
+      </div>
       );
     }
 
@@ -121,25 +100,23 @@ class App extends Component {
                   <br/>
                 So then, what can I do for you? <br/>
                 </p>
-                <p className="consoleStyle">
+
+                <p class="consoleStyle">
                 <p id="newIdentityOption" onClick={this.toggleShowNewId}> - New Identity  </p>
-                <p id="oneWayFlights" onClick={this.toggleShowFlightGenerator}> - One-way flights </p>
-                <p id="hooverMaxOption"> - The Hoover Max Pro </p>
+                <p id="hooverMaxOption"> - One-way flights </p>
+                <p id="oneWayFlights"> - The Hoover Max Pro </p>
                 </p>
             </div>
       </div>
       )
     }
-
     else if(this.state.showNewIdentity){
-      let identityGenerator = <IdentityGenerator />
       return(
         <div >
               <div id="endmessage" >
                       <div>
                       <p> There you go...</p>
-                      {identityGenerator}
-                      {FlightGenerator}
+                      <IdentityGenerator/>
                       </div>
                   <p class="consoleStyle">
                   <p>Anything else? </p>
@@ -150,11 +127,11 @@ class App extends Component {
         </div>
         )
     }
-    else if(this.state.showFlightGenerator){
-      let FlightGenerator = <FlightGenerator/>
+    else if(this.state.showAboutus){
       return(
         <div>
-          { FlightGenerator }
+          <h1> About us </h1>
+
         </div>
       )
     }
