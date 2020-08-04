@@ -11,12 +11,11 @@ class Navbar extends Component {
   logoClick = () => {
     this.props.showHome();
 }
-
   render() {
     return (
       <div className="Navbar">
           <div class="toppage">
-              <h1 class="navbaritem" onClick={this.logoClick}> Best Quality Vacuum </h1> <h4 class="navbaritem"> About us </h4>
+              <h1 class="navbaritem" onClick={this.logoClick}> Best Quality Vacuum </h1> 
           </div>
       </div>
     );

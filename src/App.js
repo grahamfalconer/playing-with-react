@@ -42,6 +42,7 @@ class App extends Component {
     })
   }
 
+
   // Voucher Submission
   handleSubmit = (event) => {
     event.preventDefault();
@@ -129,6 +130,14 @@ class App extends Component {
               </div>
         </div>
         )
+    }
+    else if(this.state.showAboutus){
+      return(
+        <div>
+          <h1> About us </h1>
+
+        </div>
+      )
     }
   }
 }
