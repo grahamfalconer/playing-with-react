@@ -150,9 +150,8 @@ class App extends Component {
         </div>
         )
     }
-    else if (this.state.showFlightGenerator){
+    else if(this.state.showFlightGenerator){
       let FlightGenerator = <FlightGenerator/>
-
       return(
         <div>
           { FlightGenerator }
