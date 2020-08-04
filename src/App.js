@@ -15,7 +15,6 @@ class App extends Component {
     };
   }
 
-
   // Best Quality Vacuums Storefront
   toggleShowHooverMax = () => {
     this.state.showProductWheel ? this.setState({ showProductWheel: false, showHooverMax: true,  }) : this.setState({ showProductWheel: true, showHooverMax: false })
@@ -23,7 +22,6 @@ class App extends Component {
   showHome = () => {
     this.setState({ showProductWheel: true, showHooverMax: false })
   }
-
 
   // "The Disappearers secret store"
   showSecretStore = () => {
@@ -42,7 +40,6 @@ class App extends Component {
     })
   }
 
-
   // Voucher Submission
   handleSubmit = (event) => {
     event.preventDefault();
@@ -59,7 +56,6 @@ class App extends Component {
     })
   }
 
-  
   render() {
     const { voucherCode } = this.state.voucherCode
     if(this.state.showProductWheel){
